@@ -2,16 +2,19 @@
 
 # 1. Purpose
 
-This repository is a beginner-friendly example of **A/B testing analysis** for an email campaign. It loads a small dataset and compares key metrics (open rate, click rate, purchase rate, revenue), then runs basic statistical tests.
+This repository contains beginner-friendly examples of **A/B testing** (2 variants) and **A/B/n testing** (3+ variants).
+
+- The **A/B** example in the repository root analyzes an email-campaign dataset from a CSV file.
+- The **A/B/n** example in `A-B-n/` runs with a built-in simulation (so it does not require a dataset file).
 
 # 2. Project files
 
-- **`ab_test_simple.py`**: Main script that loads the dataset, prints summary tables, runs statistical tests, and prints recommendations.
-- **`ab_test_data.txt`**: Sample dataset (CSV-formatted text) used by the script.
+- **`ab_test_simple.py`**: A/B testing analysis for an email campaign (loads a CSV dataset, prints metrics, runs statistical tests, prints recommendations).
+- **`ab_test_data.csv`**: Sample dataset used by `ab_test_simple.py`.
+- **`A-B-n/`**: A/B/n testing example (see `A-B-n/README.md`).
 - **`requirements.txt`**: Pip dependencies (useful if you prefer `pip` + virtualenv).
 - **`environment.yml`**: Conda environment definition (recommended if you use conda).
-- **`aaa.ipynb`**: Notebook (exploration/experiments).
-- **`ddd.py`**: Extra Python script (misc/experiments).
+- **`.gitignore`**: Git ignore rules.
 
 # 3. Setup
 
@@ -36,4 +39,10 @@ python -m pip install -r requirements.txt
 
 ```bash
 python ab_test_simple.py
+```
+
+To run the A/B/n simulation example:
+
+```bash
+python A-B-n/abn-testing-python.py
 ```
